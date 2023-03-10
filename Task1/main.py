@@ -5,7 +5,7 @@
 b = bool(True)
 while b:
     text = input('Введите трёхзначное число: ')
-    if text.isdigit() == False or len(text) > 3:
+    if text.isdigit() == False or 0 < len(text) < 3:
         print('Введено не число, либо его длина больше трёх! Повторите ввод!')
     else:
         b = False
