@@ -6,7 +6,7 @@ b = bool(True)
 while b:
     text = input('Введите трёхзначное число: ')
     if text.isdigit() == False or len(text) > 3:
-        print('Введено не число! Повторите ввод!')
+        print('Введено не число, либо его длина больше трёх! Повторите ввод!')
     else:
         b = False
 sum = int(text[0]) + int(text[1]) + int(text[2])
