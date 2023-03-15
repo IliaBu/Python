@@ -8,6 +8,6 @@ while b:
     if text.isdigit() == False or 0 < len(text) < 3:
         print('Введено не число, либо его длина больше трёх! Повторите ввод!')
     else:
-        b = False
+       b = False
 sum = int(text[0]) + int(text[1]) + int(text[2])
 print(text + ' -> ' + str(sum) + ' (' + text[0] + ' + ' + text[1] + ' + ' + text[2] + ')')
