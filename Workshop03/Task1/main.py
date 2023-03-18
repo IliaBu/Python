@@ -13,14 +13,28 @@
 
 import random
 
-N = int(input("Введите кол-во элементов в массиве: "))
-arr = [random.randint(1, int(N/2)) for i in range(N)]
-X = int(input("Введите число, которое необходимо проверить: "))
+b1 = bool(True)
+while b1:
+    N = input("Введите кол-во элементов в массиве от 1: ")
+    if N.isdigit() == False:
+        print('Введено не число, либо оно отрицательное! Повторите ввод!')
+    else:
+        b1 = False
+        
+b2 = bool(True)
+while b2:
+    X = input("Введите число, которое необходимо проверить: ")
+    if X.isdigit() == False:
+        print('Введено не число, либо оно отрицательное! Повторите ввод!')
+    else:
+        b2 = False
+
+arr = [random.randint(1, int(int(N)/2)) for i in range(int(N))]
 print(arr)
 
 count = 0
 for i in arr:
-    if i == X:
+    if i == int(X):
         count += 1
         
 print(f"Число {X} встречается в массиве {count} раз(а)")
