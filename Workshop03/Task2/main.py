@@ -11,3 +11,36 @@
 1 2 1 8 9 6 5 4 3 4
 Вывод: 6
 """
+
+import random
+
+b1 = bool(True)
+while b1:
+    N = input("Введите кол-во элементов в массиве от 1: ")
+    if N.isdigit() == False:
+        print('Введено не число, либо оно отрицательное! Повторите ввод!')
+    else:
+        b1 = False
+
+b2 = bool(True)
+while b2:
+    X = input("Введите число, которое необходимо проверить: ")
+    if X.isdigit() == False:
+        print('Введено не число, либо оно отрицательное! Повторите ввод!')
+    else:
+        b2 = False
+
+arr = [random.randint(1, int(N)) for i in range(int(N))]
+print('Кол-во элементов в массиве: ' + N)
+print('Число для проверки: ' + X)
+print(arr)
+
+min = abs(int(X) - arr[0])
+index = 0
+for i in range(1, int(N)):
+    count = abs(int(X) - arr[i])
+    if count < min:
+        min = count
+        index = i
+print(f'Вывод: число {arr[index]} в массиве наиболее близко по величине к числу {X}')
+
