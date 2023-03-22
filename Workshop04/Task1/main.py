@@ -11,3 +11,30 @@
 6 12
 """
 
+import random
+
+b1 = bool(True)
+while b1:
+    n = input('Введите кол-во элементов первого множества: ')
+    if n.isdigit() == False:
+        print('Введено не число! Повторите ввод!')
+    else:
+        b1 = False       
+print(f'Кол-во элементов первого множества: {n}')
+n1 = {random.randint(1, 50) for _ in range(int(n))}
+print(*n1)
+
+b2 = bool(True)
+while b2:
+    m = input('Введите кол-во элементов второго множества: ')
+    if m.isdigit() == False:
+        print('Введено не число! Повторите ввод!')
+    else:
+        b2 = False  
+print(f'Кол-во элементов второго множества: {m}')
+m1 = {random.randint(1, 50) for _ in range(int(m))}
+print(*m1)
+
+i = sorted(n1.intersection(m1))
+print('Кол-во встречающихся элементов множества: ')
+print(*i)
