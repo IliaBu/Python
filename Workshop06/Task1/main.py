@@ -11,7 +11,7 @@
 b1 = bool(True)
 while b1:
     a1 = input("Введите значение 1-го элемента: ")
-    if a1.isdigit() == False:
+    if a1 == '' and a1.isdigit() == False:
         print('Введено не число! Повторите ввод!')
     else:
        b1 = False
@@ -19,7 +19,7 @@ while b1:
 b2 = bool(True)
 while b2:
     d = input("Введите разность элементов: ")
-    if d.isdigit() == False:
+    if d == '' and d.isdigit() == False:
         print('Введено не число! Повторите ввод!')
     else:
        b2 = False 
@@ -27,7 +27,7 @@ while b2:
 b3 = bool(True)
 while b3:
     n = input("Введите количество элементов: ")
-    if n.isdigit() == False:
+    if n == '' and n.isdigit() == False:
         print('Введено не число! Повторите ввод!')
     else:
        b3 = False      
