@@ -8,3 +8,29 @@
 Вывод:  7 9 11 13 15
 """
 
+b1 = bool(True)
+while b1:
+    a1 = input("Введите значение 1-го элемента: ")
+    if a1.isdigit() == False:
+        print('Введено не число! Повторите ввод!')
+    else:
+       b1 = False
+       
+b2 = bool(True)
+while b2:
+    d = input("Введите разность элементов: ")
+    if d.isdigit() == False:
+        print('Введено не число! Повторите ввод!')
+    else:
+       b2 = False 
+             
+b3 = bool(True)
+while b3:
+    n = input("Введите количество элементов: ")
+    if n.isdigit() == False:
+        print('Введено не число! Повторите ввод!')
+    else:
+       b3 = False      
+
+res = [int(a1) + (i - 1) * int(d) for i in range(1, int(n) + 1)]
+print(*res)
