@@ -10,3 +10,15 @@
 пара-ра-рам рам-пам-папам па-ра-па-дам                      Парам пам-пам
 
 """
+
+phrase = list(input('Введите фразу: ').lower().split())
+function = lambda x: sum(1 for i in x if i in 'аеёиоуыэюя')
+tmp = function(phrase[0])
+print('Ввод: ')
+print(*phrase)
+print('Вывод: ')
+
+if len(phrase) <= tmp:
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
