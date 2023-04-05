@@ -1,0 +1,5 @@
+id, lastname, firstname, secondname, phone
+1, Ivanov, Ivan, Ivanovich, +79234567890
+2, Petrov, Sergey, Sergeevich, +79534567880
+3, Sidorov, Ildar, Ildarovich, +79652312458
+4, Petrov, Sergey, Ignatevich, +79854152525
